@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.EnumMap;
+import java.util.Map;
 
 public class Order {
     private boolean prime;
@@ -13,5 +15,7 @@ public class Order {
             System.out.println("delivered");
         }
         Arrays.stream(OrderStatus.values()).forEach(System.out::println);
+        //EnumMap
+        Map<OrderStatus, String> enumMap = new EnumMap<>(OrderStatus.class);
     }
 }
